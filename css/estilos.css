@@ -1,0 +1,245 @@
+/* Estilos generales */
+#video_background {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+    }
+    #video_pattern {
+    background:#fff;
+    position: fixed;
+    opacity: 0.8;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+
+body {
+    background: #000000;
+    background-size: cover;
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 150%;
+    font-weight: 400;
+    
+}
+a {
+    color: #40ca1f;
+    text-decoration: none;
+}
+
+img {
+    width: fit-content;
+    height: auto;
+}
+/*animación de Neo*/
+.img-animation {
+    Float: right;
+    Animation: movimiento 2.5s linear infinite; 
+}
+ @keyframes movimiento {
+    0%{
+    transform: translateY(0);
+    }
+    50%{
+    transform: translateY(30px);
+    }
+    100%{
+    transform: translateY(); 
+    }
+    }
+
+
+/*Botones generales*/
+input {
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-family: 'Inter';
+    font-size: 1rem;
+    line-height: 150%;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+h2 {
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-weight: 700;
+    color: #000000;
+}
+/*header*/
+header, main {
+    padding: 0 3%;
+}
+.logo-alura {
+    position: absolute;
+}
+/*body*/
+main {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    gap: 6%;
+    margin: 2rem 0;
+}
+/*Encriptador*/
+.bloque-izq {
+    flex: 1 50%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    padding-left: 10%;
+}
+.bloque-izq textarea {
+    flex: 1 100%;
+    background-color: #000000e9;
+    font-family: 'Inter';
+    font-size: 2rem;
+    line-height: 150%;
+    color: #40ca1f;
+    border: 1px solid #40ca1f;
+    border-radius: 2rem;
+    resize: unset;
+    padding: 2rem 5%;
+    height: 177px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+}
+.bloque-izq textarea::placeholder {
+    opacity: 1;
+    color: #40ca1f;
+}
+.indicacion {
+    flex: 1 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+.indicacion p {
+    display: inline-block;
+    color: #40ca1f;
+    font-size: 0.75rem;
+}
+.botones {
+    flex: 1 100%;
+    display: flex;
+    flex-flow: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.botones input {
+    flex: 1 50%;
+}
+.btn-encriptar {
+    background-color: #40ca1f;
+    border: 0;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+}
+.btn-desencriptar, .btn-copiar {
+    background-color: unset;
+    border: 1.5px solid #40ca1f;
+    color: #40ca1f;
+    transition: .4s;
+}
+/*mensajes*/
+.bloque-der {
+    flex: 1 34%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #40ca1fe9;
+    border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+}
+.instruccion {
+    flex: 1 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 7.5%;
+}
+.instruccion img {
+    width: max-content;
+}
+.textos {
+    margin-top: 2rem;
+    text-align: center;
+}
+.textos p {
+    margin-top: 1rem;
+    color: #000000;
+}
+/*Resultado*/
+.mensaje {
+    flex: 1 100%;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 7.5%;
+}
+.mensaje textarea {
+    flex: 1 100%;
+    background-color: unset;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: #000000;
+    border: 0;
+    resize: unset;
+    height: 328px;
+    padding: 20px 0 0 20px;
+}
+.btn-copiar {
+    flex: 1 100%;
+    margin-top: 2rem;
+    background: #000000;
+    color: #40ca1f;
+    transition: .4s;
+
+}
+/* Botones*/
+.btn-encriptar:hover {
+    background-color: #000000;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    color: #40ca1f;
+}
+.btn-desencriptar:hover, .btn-copiar:hover {
+    border: 0;
+    background-color: #000000;
+    color: #40ca1f;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.btn-encriptar:active, .btn-desencriptar:active, .btn-copiar:active {
+    transform: scale(0.9);
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #000000;
+    padding: 1rem;
+}
+footer p {
+    display: inline-flex;
+    gap: 0.3rem;
+    font-size: 0.875rem;
+    color: #40ca1f;
+}
+footer strong {
+    font-weight: 700;
+}

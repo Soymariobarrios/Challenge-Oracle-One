@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador de Texto - Desafío ONE | MATRIX</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!--Hojas de estilos-->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/mobile.css">
+
+        <!--Tipografías y otros recursos-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,0" />
+    </head>
+
+    <body>
+        <header>
+            <h1 class="logo-alura">
+                <img src="imagenes/logo-alura.png" alt="Logotipo de Alura">
+            </h1>
+        </header>
+
+        <main>
+            <form class="bloque-izq">  
+                <textarea class="input-text" cols="20" rows="3" placeholder="Ingrese el texto aquí" onkeypress="return validacion(event)" required></textarea>
+
+                <fieldset class="indicacion">
+                    <img src="imagenes/icono-exclamacion.png" alt="Icono de Exclamación">
+                    <p class="texto-indicacion">Solo letras minúsculas. No se aceptan acentos, caracteres especiales y números.</p>
+                </fieldset>
+
+                <fieldset class="botones">
+                    <input class="btn-encriptar" type="button" type="submit" value="Encriptar" onclick="resultadoEncriptar()">
+                    <input class="btn-desencriptar" type="button" type="submit" value="Desencriptar" onclick="resultadoDesencriptar()">
+                </fieldset>                 
+            </form>
+
+            <div class="bloque-der">
+                <div class="instruccion">
+                    <img src="imagenes/imagen-neo.png" class="img-animation" alt="Ilustración de persona buscando con lupa">
+
+                    <div class="textos">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+                    </div>
+                </div>
+
+                <form class="mensaje">
+                    <textarea class="output-text" cols="15" rows="8" readonly></textarea>
+                    <input class="btn-copiar" type="button" value="Copiar" onclick="copiar()">
+                </form> 
+            </div>
+        </main>
+        <video src="video/Backgroundmatrixnuevo.m4v" autoplay="true" muted="true" loop="true" id="video_background" poster="imagenes/matrix-poster.jpg"></video>
+
+        <footer>
+            <p>Desarrollado por <strong><a href="https://github.com/Soymariobarrios" target="_blank">Mario Barrios</a></strong></p>
+            <p>|</p>
+            <p><span class="material-symbols-outlined">mail</span> <a href="mailto:mariobarrios.dev@gmail.com">mariobarrios.dev@gmail.com</a></p>
+            <p>|</p> 
+            <p>&copy Copyright 2024</p>
+        </footer>
+
+        <script src="js/action.js"></script>
+    </body>
+
+</html>
